@@ -1,0 +1,106 @@
+%---------------------------------------------------------------------------%
+%->> Titlepage information
+%---------------------------------------------------------------------------%
+%-
+%\includepdfmerge{[pdfname],[a-b]｝//pdfname 是pdf的名字，放当前目录下，a-b是引用的页数。
+%
+\includepdfmerge{fengmian.pdf,1-2}
+%-> Chinese titlepage
+%-
+\confidential{}% confidential level
+\schoollogo{scale=0.95}{wzu}% university logo
+%\title{在光学腔中自旋压缩态产生的研究}% 
+\title[温州大学硕士学位论文]{在光学腔中自旋压缩态产生的研究}
+\author{刘刚}% name of author
+\advisor{王明锋}% supervisor
+\advisorsec{}% co-supervisor
+\degree{硕士}% degree
+\degreetype{理学}% degree type
+\major{凝聚态物理}% major
+\institute{温州大学}% institute of author
+\chinesedate{2014~年~6~月}% customized date, 6 for summer and 12 for winter graduation
+%-
+%-> English titlepage
+%-
+\englishtitle{\LaTeX{} Thesis Template\\ of \\ The University of Chinese Academy of Sciences {$~^{\pi}\pi^{\pi}$}}
+\englishauthor{Huangrui Mo}
+\englishadvisor{Supervisor: Professor Qingquan Liu}
+\englishdegree{Master of Natural Science}% degree type <Doctor|Master> of <Philosophy|Natural Science|Engineering>
+\englishthesistype{thesis}% thesis type <thesis|dissertation>
+\englishmajor{Fluid Mechanics}% major
+\englishinstitute{Institute of Mechanics, Chinese Academy of Sciences}
+\englishdate{June, 2014}% customized date
+%-
+%-> Create titlepages
+%-
+%\maketitle
+%\makeenglishtitle
+%-
+%-> Author's declaration
+%-
+\makedeclaration
+%-
+%-> Chinese abstract
+%-
+
+\chapter[摘要]{在光学腔中自旋压缩态产生的研究}
+\vbox{}
+\vbox{}
+\section*{\qquad\qquad\qquad\qquad\qquad\qquad\quad\  摘\quad 要}
+\vskip 1.2cm
+%\chaptermark{摘\quad 要}
+
+\setcounter{page}{1}% set page number
+\pagenumbering{Roman}% set large roman
+
+{
+	\par
+	\zihao{4}
+	\linespread{1.5}\selectfont
+	
+	
+	量子光学是研究光场的量子统计、量子相干性质，以及光和物质相互作用中的量子效应的一门学科。量子光场在与原子系综相互作用的过程中产生的一系列非经典效应是近年来量子光学领域研究的一个焦点，研究这些非经典效应不仅可以帮助我们更好认识光的本质到底是什么，而且在实际的应用方面也有着很大的研究价值。量子纠缠和自旋压缩则是非常典型的两种非经典效应，它们在量子计算、量子信息处理以及精密测量等方面有着非常重要的应用。本文主要研究了在光学腔中如何来产生自旋压缩和量子纠缠，因此本文主要通过两部分内容来开展：%本文主要研究了利用在光学腔中通过光场与$\Lambda$型三能级原子系综之间的相互作用来产生自旋压缩和量子纠缠，本文主要通过这两部分内容开展研究工作。
+	
+	1.主要研究了在光学腔中如何产生自旋压缩态。我们通过研究表明，如果将三能级原子系综置于光学腔中，然后向其内部注入一束强激光，则原子系综会在强光场和腔模共同作用下产生压缩特性。
+	%我们首先写出了描绘三能级原子系综与单模腔场相互作用系统的哈密顿量，然后在大失谐的情况下绝热消除掉了激发态和腔模得到了有效哈密顿量，最后我们根据有效哈密顿量得到了系统自旋分量随时间的演化方程，通过求解这组方程我们得到了相关的压缩性质。
+	通过分析这些压缩特性我们发现其是单轴扭曲型的压缩，附加适当的磁场可以将单轴扭曲的哈密顿量转变成双轴扭曲的哈密顿量，从而可以提高系统的压缩度。我们还分析了噪声对系统的影响，发现即便在存在噪声的情况下，系统也可以产生很高的压缩度。
+	
+%	性质我们得到一些很有意义的结果，即我们的方案在某些假设下可以产生较高的压缩度。我们期望我们的方案在精密测量等应用起到非常积极的作用。
+	
+	2.研究了在光学腔中如何建立两个原子系综之间的纠缠。在同一光学腔内放入两个原子系综，通过研究表明，在光学腔内部放入两个原子系综，则这两个系综会在强驱动场的作用下彼此之间建立纠缠。这一纠缠根植于原子之间的非破坏性相互作用，利用Simon的Peres-Horodecki判据证明了在这个哈密顿量下，两个原子系综之间的确存在着非经典关联。而非破坏性相互作用是连续变量量子计算中一个很重要的量子门，故我们相信本方案对量子计算的发展也起到一定的作用。
+\par
+
+\vbox{}
+\keywords{量子纠缠，自旋压缩态，三能级原子系综}}
+%-
+%-> English abstract
+%-
+
+\chapter[Abstract]{\linespread{1.5}\selectfont RESEARCH OF GENERATION OF SPIN SQUEEZED STATES IN OPTICAL CAVITY}
+
+\vskip 3cm
+\section*{\qquad\qquad\qquad\qquad\qquad\quad\quad ABSTRACT}
+\vskip 2cm
+%\chaptermark{Abstract}
+%\vskip 1cm
+
+
+{
+	\par
+	\zihao{4}
+	\linespread{1.5}\selectfont
+	
+	 Quantum optics is a discipline that studies quantum statistics, quantum coherence properties, and quantum effects in light and matter  interactions. The series of non-classical effects produced by quantum  light field in the process of interaction with atomic ensembles is a focus of research in the field of quantum optics in recent years. Studying these non-classical effects can not only help us better understand what is the nature of light, and it also has great research value in practical applications. Quantum entanglement and spin squeezing are two typical non-classical effects, and they have very important applications in quantum computing, quantum information processing, and precision measurement. This paper mainly studies how to generate spin squeezing and quantum entanglement in the optical cavity, so this paper is mainly carried out through two parts:
+	  
+	  
+	
+	1. It is mainly studied how to generate a spin-squeezed state in an optical cavity. Our research shows that if a three-level atomic system is placed in an optical cavity and then a strong laser is injected into the interior, the atomic ensemble will produce squeeze characteristics under the action of the strong light field and the cavity mode. By analyzing these compression characteristics, we find that it is a uniaxially twisted type of compression. By adding an appropriate magnetic field, the uniaxially distorted Hamiltonian can be converted into a biaxially distorted Hamiltonian, which can improve the system's compression. We also analyzed the effects of noise on the system and found that the system can produce very high compression even in the presence of noise.
+	
+	2. The entanglement between two atomic ensembles was established in an optical cavity. Two atomic ensembles are placed in the same optical cavity. Studies have shown that by placing two atomic ensembles inside the optical cavity, the two ensembles will entangle each other under the action of a strong driving field. This entanglement is rooted in non-destructive interactions between atoms, using Simon's Peres-Horodecki criterion to prove that there is indeed a non-classical relationship between the two atomic ensembles under this Hamiltonian. Non-destructive interaction is a very important quantum gate in the quantum calculation of continuous variables, so we believe that this scheme also plays a certain role in the development of quantum computing.
+	\par
+
+
+\vbox{}
+%\vskip 1cm
+\englishkeywords{\linespread{1.5}\selectfont quantum entanglement,\  spin squeezed states,\  three-level atomic enesmble}}
+%---------------------------------------------------------------------------%

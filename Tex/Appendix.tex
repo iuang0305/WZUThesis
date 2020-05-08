@@ -1,0 +1,38 @@
+
+\chapter[附录]{附录\quad 噪声情况下运动方程的详细推导}\label{appendix}
+\vbox{}
+\vbox{}
+在这个附录中，我们分析了在自发辐射和空腔衰变情况下我们的方案的性能。通过考虑噪音的影响，公式(\ref{eq444})-(\ref{eq4410})的Maxwell-Bloch方程将变为\cite{PhysRevA.76.033804}
+\begin{align} \label{a1}
+	\begin{split}
+\dot {\hat \sigma}_{11}  =& -\Omega_0 \hat S_y + i   \frac \Omega2{ \hat \sigma}_{31} - i \frac{ \Omega^\ast}{2}{ \hat \sigma}_{13} + \gamma{ \hat \sigma}_{33}+ F_{11},\\
+\dot {\hat \sigma}_{22} =&~\Omega_0 \hat S_y + i g \hat \varepsilon{ \hat \sigma}_{32} - ig^\ast{ \hat \sigma}_{23} \hat \varepsilon^\dag + \gamma{ \hat \sigma}_{33}+ F_{22},\\
+\dot {\hat \sigma}_{12} =& ~ i  \Omega_0  \hat S_z + i   \frac{\Omega}{2}{ \hat \sigma}_{32} - ig^\ast{ \hat \sigma}_{13} \hat \varepsilon^\dag,\\
+\dot {\hat\varepsilon} =& - \frac\kappa2\hat\varepsilon - ig^\ast{\hat\sigma}_{23} + \sqrt\kappa{\hat\varepsilon}_{in}+i\delta\hat\varepsilon,\\
+\dot {\hat \sigma}_{13} =& -i\frac{ \Omega_0}2 \sigma_{23} - (i  \Delta + \gamma){ \hat \sigma}_{13}-i \frac\Omega2({ \hat \sigma}_{11}-{ \hat \sigma}_{33})\\
+&- ig\hat\varepsilon{\hat\sigma}_{12} + F_{13},\\
+\dot {\hat \sigma}_{23} =& -i\frac{ \Omega_0}2 \sigma_{13} - (i\Delta+\gamma){\hat\sigma}_{23} - ig\hat\varepsilon({\hat\sigma}_{22}-{\hat\sigma}_{33})\\
+&- i\frac\Omega2{\hat\sigma}_{21}+F_{23},\\
+\dot {\hat \sigma}_{33} =&~i\frac{\Omega^\ast}2{\hat\sigma}_{13} - i\frac\Omega2{\hat\sigma}_{31}+ig^\ast{\hat\sigma}_{23}\hat\varepsilon^\dag
+- ig\hat\varepsilon{\hat\sigma}_{32} \\
+&- 2\gamma{\hat\sigma}_{33}+F_{33},
+\end{split}
+\end{align}
+在上面的这组方程中，我们引进了激发态$\ket{3}$的自发辐射的衰减率，$\gamma_3=\gamma_{13}+\gamma_{23}=2\gamma=2\omega_0^2d^2/(3\pi\epsilon_0c^3)$ \cite{fox2006quantum} (其中我们假设$\gamma_{13}=\gamma_{23}\equiv \gamma$)，原子算符的朗之万噪声算符$F_{\mu\nu}$，腔的衰减率$kappa$和量子场的输入场$\hat{\varepsilon^{in}}$。朗之万噪声算符之间的对易关系，可通过如下的广义的爱因斯坦关系\cite{PhysRevA.76.033804,JOB}推导出来$\langle \hat F_{uv}(t)\hat F_{u'v'}(t')\rangle=\langle\mathcal {D}(\hat\sigma_{uv}\hat\sigma_{u'v'})-\mathcal {D}(\hat\sigma_{uv})\hat\sigma_{u'v'}-\hat\sigma_{uv}\mathcal {D}(\hat\sigma_{u'v'})\rangle\delta(t-t')$
+其中$\mathcal {D}(\hat\sigma_{ucv})$表示忽略掉朗之万噪声项以后的从海登堡-朗之万方程得到的${\hat\sigma}_{uv}$的演化。输入腔场满足 $[\hat\varepsilon_{in}(t),\hat\varepsilon_{in}^\dag(t')]=\delta(t-t')$的对易关系。这里我们假设了在$\ket{1}$和$\ket{2}$之间没有衰减存在(因为在实际实现过程中，基态的相干时间通常比相互作用时间$t$长得多)。除此之外，我们还向系统引入了关于$x$方向的自旋旋转，通过在方程(\ref{eq443})的哈密顿量中加了一个与时间无关的项$\Omega_0 \hat J_x$得到的，将导致在方程(\ref{a1})中的项与$\Omega_0 $成比例。对应于这组耦合方程，基态的演化可以很容易的得出
+\begin{align}\label{a2}
+\begin{split}
+\dot {\hat \sigma}_{11} &= -\Omega_0 {\hat S}_y - \eta{\hat\sigma}_{11} +\hat{\mathcal{F}}_{11}, \\
+\dot {\hat \sigma}_{22} &= \Omega_0 {\hat S}_y +\eta{\hat\sigma}_{11}+\hat{\mathcal{F}}_{22},\\
+\dot {\hat \sigma}_{12} &= i\Omega_0 {\hat S}_z - \left(\frac{|\Omega|^2}{4\Delta_\gamma^\ast}+  \frac{i|\Omega|^2|g|^2}{2\delta_{\kappa/2}^\ast\Delta\Delta_\gamma^\ast}S_z\right){\hat\sigma}_{12}+\hat{\mathcal{F}}_{12}, 
+\end{split}
+\end{align}
+其中$\eta=\chi_0\gamma/\Delta$表示光泵速率。我们还定义了$\delta_{\kappa/2}=\frac\kappa2-i\delta$，$\Delta_\gamma=\gamma+i\Delta$，以及改进后的朗之万噪声算符$\hat{\mathcal{F}}_{11}$，$\hat{\mathcal{F}}_{22}$，$\hat{\mathcal{F}}_{12}$。在公式(\ref{a2})的推导过程中我们假设角频率$\Omega_0\ll \Delta$，从而忽略了它对绝热消除过程的影响。从(\ref{a2})式我们直接演绎出原子集体算符随时间的演化
+\begin{align}
+{{\dot {\hat S}}_y} =&   {\Omega _0}{{\hat S}_z} - \frac{\kappa_0}{1+r_0^2}\left( {{{\hat S}_x}{{\hat S}_z} + {{\hat S}_z}{{\hat S}_x} + {{\hat S}_x}} \right)\nonumber\\
+&+ \frac{r_0\kappa_0}{1+r_0^2}\left( {{{\hat S}_y}{{\hat S}_z} + {{\hat S}_z}{{\hat S}_y} + {{\hat S}_y}} \right)\label{a4}\\
+&- {\chi _0}{{\hat S}_x} - \eta {{\hat S}_y} + \sqrt {2S\eta } {\hat {\mathcal{F}}_y},\nonumber\\
+\dot {\hat S}_z=&  -\Omega_0 {\hat S}_y - S\eta- \eta{\hat S}_z  +\sqrt{2S\eta}\hat{\mathcal{F}}_z,\label{a5}
+\end{align}
+其中$r_0=\kappa/2\delta$，我们也忽略掉了由于腔模引起的基态的$AC-Stark$ $Shift$。在公式(\ref{a5})的右侧我们使用了关系$\hat\sigma_{11}\simeq\hat S_z+S$，我们也定义了新的噪声算符$\hat{\mathcal{F}}_y= (\hat{\mathcal{F}}_{12}-\hat{\mathcal{F}}_{12}^\dag)/2i\sqrt{S\eta}$和 $\hat{\mathcal{F}}_z= (\hat{\mathcal{F}}_{11}-\hat{\mathcal{F}}_{22})/2\sqrt{S\eta}$。根据爱因斯坦关系我们可以得到关系 $\langle\hat{\mathcal{F}}_y(t) \hat{\mathcal{F}}_z(t')\rangle\simeq i\delta(t-t')/2$ 和 $\langle\hat{\mathcal{F}}_y(t)\hat{\mathcal{F}}_y(t')\rangle=\langle\hat{\mathcal{F}}_z(t)\hat{\mathcal{F}}_z(t')\rangle\simeq \delta(t-t')/2$。上述等式表明噪声引起横向自旋分量的衰减和基态布居数的重新分布(因为在公式(\ref{a5})中，$\langle \hat S_z\rangle\propto S\eta$)。需要指出的是，由于空腔衰减而产生的等式(\ref{a4})中$r_0\ll 1$的极限中可忽略不计。
+
